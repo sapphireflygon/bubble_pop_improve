@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Game from './containers/Game';
 
 function App() {
+
+  const [ready, setReady] = useState(false);
+  const [score, setScore] = useState(0);
+
+
+  const toggleReady = () => {
+    setReady(!ready);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='banana'>Bubble Pop</h1>
+      {ready ? (
+        <span>
+          <h2 className='score'>Score: {score}</h2>
+          <button className='reset-btn' onClick={toggleReady}>Reset</button>
+        </span>
+      ) : (
+        null 
+      )}
+      <Game ready={ready} toggleReady={toggleReady} setScore={setScore} />
     </div>
   );
 }

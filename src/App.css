@@ -1,38 +1,26 @@
 .App {
   text-align: center;
+  overflow: hidden;
+  background: url('/src/static/images/moody-jellies.jpg') no-repeat 50% / cover;
+  position: relative;
+  height: 99vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.banana {
+  color: aliceblue;
+  font-family: lamarkie;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.score {
+  color: aliceblue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reset-btn {
+  cursor: pointer;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  border-radius: 18px;
+  background-color: aliceblue;
 }
